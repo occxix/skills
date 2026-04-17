@@ -19,7 +19,9 @@
 
 ## 快速开始
 
-### 方式一：从 skills.sh 安装（推荐）
+### Claude Code
+
+#### 方式一：从 skills.sh 安装（推荐）
 
 [![skills.sh](https://img.shields.io/badge/skills.sh-Open%20Skills%20Ecosystem-blue)](https://skills.sh)
 
@@ -32,7 +34,7 @@ npx skills add occxix/skills/plugins/minimax-api
 npx skills add occxix/skills/plugins/minimax-testing
 ```
 
-### 方式二：通过 Claude Code 插件市场安装
+#### 方式二：通过 Claude Code 插件市场安装
 
 ```bash
 # 添加市场
@@ -46,6 +48,47 @@ npx skills add occxix/skills/plugins/minimax-testing
 /plugin enable minimax-api@occxix
 /plugin disable minimax-api@occxix
 ```
+
+### OpenClaw / Hermes
+
+如果你的 Agent 支持相同的插件架构：
+
+```bash
+# 1. 克隆仓库
+git clone https://github.com/occxix/skills.git
+cd skills
+
+# 2. 查看 Agent 支持的安装命令
+# OpenClaw: 参考其文档中的 /plugin 或 skills 命令
+# Hermes: 使用 skill_manage 或手动配置
+
+# 3. 手动配置（通用方式）
+# 将 skills 目录链接到 Agent 的 skills 目录
+```
+
+### 其他 Agent
+
+手动安装：
+
+```bash
+# 克隆仓库
+git clone https://github.com/occxix/skills.git
+
+# 手动复制 skills 到 Agent 的 skills 目录
+# 具体路径取决于你的 Agent 配置
+cp -r plugins/* ~/.claude/skills/
+```
+
+---
+
+## 安装方式对比
+
+| Agent | 推荐方式 | 命令 |
+|-------|----------|------|
+| **Claude Code** | skills.sh 或 /plugin | `npx skills add occxix/skills` |
+| **OpenClaw** | 插件市场或手动 | 参考 OpenClaw 文档 |
+| **Hermes** | 手动或 skill_manage | 参考 Hermes 文档 |
+| **其他 Agent** | 手动安装 | 复制 skills 目录 |
 
 ---
 
