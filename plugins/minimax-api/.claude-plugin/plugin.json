@@ -17,6 +17,6 @@
     "claude-code"
   ],
   "skills": [
-    "./skills/api-call/"
+    "../skills/api-call/"
   ]
 }
