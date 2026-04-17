@@ -1,0 +1,23 @@
+{
+  "name": "minimax-testing",
+  "version": "1.0.0",
+  "description": "MiniMax M2.5/M2.7 模型上下文测试套件，支持 Recall、筛选、数学、代码、推理多维度测试",
+  "author": {
+    "name": "occxix",
+    "url": "https://github.com/occxix"
+  },
+  "homepage": "https://github.com/occxix/skills",
+  "repository": "https://github.com/occxix/skills",
+  "license": "MIT",
+  "keywords": [
+    "minimax",
+    "m2.5",
+    "m2.7",
+    "testing",
+    "context",
+    "claude-code"
+  ],
+  "skills": [
+    "./skills/context-test/"
+  ]
+}

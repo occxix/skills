@@ -1,0 +1,22 @@
+{
+  "name": "minimax-api",
+  "version": "1.0.0",
+  "description": "MiniMax M2.5/M2.7 API 调用指南，包含 Python 调用示例、模型选择建议与错误处理",
+  "author": {
+    "name": "occxix",
+    "url": "https://github.com/occxix"
+  },
+  "homepage": "https://github.com/occxix/skills",
+  "repository": "https://github.com/occxix/skills",
+  "license": "MIT",
+  "keywords": [
+    "minimax",
+    "m2.5",
+    "m2.7",
+    "api",
+    "claude-code"
+  ],
+  "skills": [
+    "./skills/api-call/"
+  ]
+}

@@ -7,8 +7,8 @@ MiniMax 综合测试套件 (v3.1)
 
 import sys
 import os
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), '../../../minimax-api/references/api'))
-from call_minimax import call_minimax, call_with_retry
+sys.path.insert(0, os.path.dirname(__file__))
+from api_call import call_minimax, call_with_retry
 import time
 import argparse
 from typing import Dict, List, Tuple
