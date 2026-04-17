@@ -15,6 +15,8 @@
 | [minimax-api](./plugins/minimax-api) | 1.0.0 | MiniMax M2.5/M2.7 API 调用指南 | api-call |
 | [minimax-testing](./plugins/minimax-testing) | 1.0.0 | 上下文测试套件 | context-test |
 
+> **⚠️ 性能测试声明**：文字生成速度的测试方法和统计较为简陋，不够专业，仅供参考。实际速度受网络、服务器负载等因素影响较大。
+
 ---
 
 ## 快速开始
