@@ -1,0 +1,20 @@
+{
+  "name": "csvkse-skills",
+  "owner": {
+    "name": "csvkse"
+  },
+  "plugins": [
+    {
+      "name": "minimax-api",
+      "source": "./plugins/minimax-api",
+      "description": "MiniMax M2.5/M2.7 API 调用指南，包含 Python 调用示例、模型选择建议与错误处理",
+      "version": "1.0.0"
+    },
+    {
+      "name": "minimax-testing",
+      "source": "./plugins/minimax-testing",
+      "description": "MiniMax M2.5/M2.7 模型上下文测试套件，支持 Recall、筛选、数学、代码、推理多维度测试",
+      "version": "1.0.0"
+    }
+  ]
+}
