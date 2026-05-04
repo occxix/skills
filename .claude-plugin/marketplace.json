@@ -27,6 +27,12 @@
       "source": "./plugins/plugin-standardizer",
       "description": "将非标准 Claude Code 插件转换为标准格式，自动重构目录结构并注册到 marketplace",
       "version": "1.0.0"
+    },
+    {
+      "name": "auto-fixer",
+      "source": "./plugins/auto-fixer",
+      "description": "自动检测并修复插件项目结构问题，确保符合 Claude Code 插件规范",
+      "version": "1.0.0"
     }
   ]
 }
