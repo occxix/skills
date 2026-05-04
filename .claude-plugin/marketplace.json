@@ -27,6 +27,12 @@
       "source": "./plugins/plugin-standardizer",
       "description": "将非标准 Claude Code 插件转换为标准格式，自动重构目录结构并注册到 marketplace",
       "version": "1.0.0"
+    },
+    {
+      "name": "plugin-maintainer",
+      "source": "./plugins/plugin-maintainer",
+      "description": "插件项目维护 Agent，管理插件生命周期：创建、验证、标准化、注册、版本更新",
+      "version": "1.0.0"
     }
   ]
 }

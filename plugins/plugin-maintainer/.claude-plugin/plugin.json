@@ -1,0 +1,23 @@
+{
+  "name": "plugin-maintainer",
+  "version": "1.0.0",
+  "description": "插件项目维护 Agent，管理插件生命周期：创建、验证、标准化、注册、版本更新",
+  "author": {
+    "name": "csvkse",
+    "url": "https://github.com/csvkse"
+  },
+  "homepage": "https://github.com/csvkse/skills/tree/main/plugins/plugin-maintainer",
+  "repository": "https://github.com/csvkse/skills",
+  "license": "MIT",
+  "keywords": [
+    "plugin",
+    "maintainer",
+    "agent",
+    "lifecycle",
+    "claude-code"
+  ],
+  "minimum_claude_version": "1.8.0",
+  "skills": [
+    "../skills/plugin-maintainer/"
+  ]
+}
