@@ -28,9 +28,9 @@ csvkse/skills/
 │   └── marketplace.json          # 插件市场配置
 ├── agents/                       # Agent 定义
 │   └── plugin-maintainer.md      # 插件维护 Agent
-├── commands/                     # 斜杠命令
-│   ├── init-novel.md             # 初始化小说知识库
-│   └── standardize-plugin.md     # 标准化插件
+├── commands/                     # 斜杠命令（通用）
+│   ├── install-all.md            # 一键安装所有插件
+│   └── update-all.md             # 一键更新所有插件
 ├── hooks/                        # 事件钩子
 │   ├── hooks.json                # 钩子配置
 │   ├── validate_plugin_structure.py
@@ -38,24 +38,41 @@ csvkse/skills/
 ├── scripts/                      # 工具脚本
 │   ├── validate_plugin.py        # 插件验证
 │   └── scan_plugins.py           # 扫描插件
-├── templates/                    # 模板文件
-│   ├── chapter-summary.md        # 章节总结模板
+├── templates/                    # 模板文件（通用）
 │   ├── plugin-json.md            # plugin.json 模板
 │   └── skill-md.md               # SKILL.md 模板
 ├── references/                   # 参考文档
 │   └── plugin-structure-guide.md # 插件结构规范
+├── docs/                         # 文档目录
+│   └── plugin-types.md           # 插件类型说明
+├── assets/                       # 资源文件
 └── plugins/                      # 插件目录
     ├── minimax-api/
     ├── minimax-testing/
     ├── novel-chapter-parser/
-    └── plugin-standardizer/
+    │   └── commands/
+    │       └── init-novel.md     # 初始化小说知识库
+    ├── plugin-standardizer/
+    │   └── commands/
+    │       └── standardize-plugin.md
+    └── auto-fixer/
 ```
 
 ---
 
 ## 快速开始
 
-### 方式一：从 skills.sh 安装
+### 方式一：一键安装全部插件
+
+```bash
+# 添加市场并安装所有插件
+/plugin marketplace add csvkse/skills
+/install-all
+```
+
+或使用 `/update-all` 更新所有已安装插件。
+
+### 方式二：从 skills.sh 安装
 
 ```bash
 # 安装所有插件
@@ -68,13 +85,13 @@ npx skills add csvkse/skills/plugins/novel-chapter-parser
 npx skills update csvkse/skills
 ```
 
-### 方式二：通过 Claude Code 插件市场
+### 方式三：通过 Claude Code 插件市场（按需选择）
 
 ```bash
 # 添加市场
 /plugin marketplace add csvkse/skills
 
-# 安装插件
+# 按需安装单个插件
 /plugin install novel-chapter-parser@csvkse
 /plugin install plugin-standardizer@csvkse
 /plugin install auto-fixer@csvkse
@@ -93,7 +110,7 @@ npx skills update csvkse/skills
 /plugin list
 ```
 
-### 方式三：手动安装
+### 方式四：手动安装
 
 ```bash
 git clone https://github.com/csvkse/skills.git
@@ -101,6 +118,55 @@ cp -r skills/plugins/* ~/.claude/plugins/
 
 # 更新
 cd skills && git pull
+```
+
+---
+
+## 安装副作用
+
+使用 `/plugin install` 方式安装任意插件后，以下共享组件自动加载：
+
+| 组件 | 说明 |
+|------|------|
+| `plugin-maintainer` Agent | 插件生命周期管理 |
+| `/install-all` 命令 | 一键安装所有插件 |
+| `/update-all` 命令 | 一键更新所有插件 |
+
+**原因**: 根目录 `agents/`、`commands/`、`hooks/` 为共享资源，通过 `/plugin` 安装时自动加载。
+
+> **注意**: `npx skills add` 和手动安装方式无此副作用，仅复制文件，不加载共享组件。
+
+---
+
+## 插件专属命令
+
+以下命令仅安装对应插件后可用：
+
+| 命令 | 插件 | 说明 |
+|------|------|------|
+| `/init-novel` | novel-chapter-parser | 初始化小说知识库 |
+| `/standardize-plugin` | plugin-standardizer | 标准化插件格式 |
+
+---
+
+## 安装路径
+
+不同安装方式，插件存储位置不同：
+
+| 安装方式 | 存储路径 |
+|----------|----------|
+| `/plugin install` | `~/.claude/plugins/marketplaces/csvkse-skills/plugins/<name>/` |
+| `npx skills add` | `~/.agents/skills/<name>/` 或 `~/.claude/skills/<name>/` |
+| 手动复制 | 用户指定位置 |
+
+**示例**：
+
+```bash
+# /plugin install 方式
+~/.claude/plugins/marketplaces/csvkse-skills/plugins/novel-chapter-parser/
+
+# npx skills add 方式
+~/.agents/skills/novel-chapter-parser/
 ```
 
 ---
