@@ -1,0 +1,22 @@
+{
+  "name": "plugin-standardizer",
+  "version": "1.0.0",
+  "description": "将非标准 Claude Code 插件转换为标准格式，自动重构目录结构并注册到 marketplace",
+  "author": {
+    "name": "csvkse",
+    "url": "https://github.com/csvkse"
+  },
+  "homepage": "https://github.com/csvkse/skills/tree/main/plugins/plugin-standardizer",
+  "repository": "https://github.com/csvkse/skills",
+  "license": "MIT",
+  "keywords": [
+    "plugin",
+    "standardize",
+    "converter",
+    "claude-code"
+  ],
+  "minimum_claude_version": "1.8.0",
+  "skills": [
+    "../skills/plugin-standardizer/"
+  ]
+}

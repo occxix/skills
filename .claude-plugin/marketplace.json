@@ -21,6 +21,12 @@
       "source": "./plugins/novel-chapter-parser",
       "description": "小说章节解析器，三次操作流程构建知识库，自动提取人物、组织、剧情等实体",
       "version": "2.1.0"
+    },
+    {
+      "name": "plugin-standardizer",
+      "source": "./plugins/plugin-standardizer",
+      "description": "将非标准 Claude Code 插件转换为标准格式，自动重构目录结构并注册到 marketplace",
+      "version": "1.0.0"
     }
   ]
 }
