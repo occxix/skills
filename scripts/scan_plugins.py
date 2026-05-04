@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 """
 插件扫描脚本 - 扫描所有插件并生成报告
 
@@ -8,7 +9,12 @@
 import json
 import sys
 import os
+import io
 from pathlib import Path
+
+# Fix Windows console encoding
+if sys.platform == 'win32':
+    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 
 def scan_plugins(plugins_dir: str) -> dict:
     """扫描所有插件"""

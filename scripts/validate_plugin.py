@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 """
 插件验证脚本 - 检查插件结构是否符合规范
 
@@ -8,7 +9,12 @@
 import json
 import sys
 import os
+import io
 from pathlib import Path
+
+# Fix Windows console encoding
+if sys.platform == 'win32':
+    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 
 def validate_plugin(plugin_dir: str) -> dict:
     """验证插件结构"""
