@@ -1,0 +1,33 @@
+{
+  "name": "novel-chapter-parser",
+  "version": "2.1.0",
+  "description": "小说章节解析器（知识库自动构建）- 三次操作流程处理小说章节，自动提取人物、组织、剧情等实体信息",
+  "author": {
+    "name": "occxix",
+    "url": "https://github.com/occxix"
+  },
+  "contributors": [
+    {
+      "name": "csvkse",
+      "url": "https://github.com/csvkse"
+    }
+  ],
+  "homepage": "https://github.com/csvkse/skills/tree/main/plugins/novel-chapter-parser",
+  "repository": "https://github.com/csvkse/skills",
+  "license": "MIT",
+  "keywords": [
+    "小说",
+    "章节解析",
+    "知识库",
+    "人物关系",
+    "剧情梳理",
+    "读书笔记"
+  ],
+  "minimum_claude_version": "1.8.0",
+  "dependencies": {
+    "python": ">=3.8"
+  },
+  "skills": [
+    "../skills/novel-chapter-parser/"
+  ]
+}
