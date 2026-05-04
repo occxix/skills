@@ -1,0 +1,188 @@
+{
+  "name": "novel-chapter-parser",
+  "version": "2.1.0",
+  "description": "小说章节解析器（知识库自动构建）- 三次操作流程处理小说章节，自动提取人物、组织、剧情等实体信息",
+  "author": {
+    "name": "occxix",
+    "url": "https://github.com/occxix"
+  },
+  "contributors": [
+    {
+      "name": "csvkse",
+      "url": "https://github.com/csvkse"
+    }
+  ],
+  "homepage": "https://github.com/csvkse/skills/tree/main/plugins/novel-chapter-parser",
+  "repository": "https://github.com/csvkse/skills",
+  "license": "MIT",
+  "keywords": [
+    "小说",
+    "章节解析",
+    "知识库",
+    "人物关系",
+    "剧情梳理",
+    "读书笔记"
+  ],
+  "minimum_claude_version": "1.8.0",
+  "dependencies": {
+    "python": ">=3.8"
+  },
+  "configuration": {
+    "default_knowledge_base_path": {
+      "type": "string",
+      "description": "默认知识库存储路径",
+      "default": "./novel-knowledge-base"
+    },
+    "auto_extract_enabled": {
+      "type": "boolean",
+      "description": "是否启用自动内容提取功能",
+      "default": true
+    },
+    "auto_confirm_updates": {
+      "type": "boolean",
+      "description": "是否自动确认实体更新（不提示用户）",
+      "default": false
+    }
+  },
+  "commands": [
+    {
+      "name": "/init-novel",
+      "description": "初始化小说知识库目录结构",
+      "usage": "/init-novel <小说名称> [知识库路径]",
+      "example": "/init-novel 诡秘之主",
+      "script": "./scripts/init_novel.py",
+      "parameters": [
+        {
+          "name": "novel_name",
+          "type": "string",
+          "description": "小说名称",
+          "required": true
+        },
+        {
+          "name": "base_path",
+          "type": "string",
+          "description": "知识库存储路径（可选）",
+          "required": false
+        }
+      ]
+    },
+    {
+      "name": "/parse-chapter",
+      "description": "处理指定章节（执行三次操作流程）",
+      "usage": "/parse-chapter <章节号> <小说原文路径> [知识库路径]",
+      "example": "/parse-chapter 1 ./novel.txt",
+      "script": "./scripts/parse_chapter.py",
+      "parameters": [
+        {
+          "name": "chapter_num",
+          "type": "integer",
+          "description": "章节号",
+          "required": true
+        },
+        {
+          "name": "source_path",
+          "type": "string",
+          "description": "小说原文文件或目录路径",
+          "required": true
+        },
+        {
+          "name": "kb_path",
+          "type": "string",
+          "description": "知识库路径（可选，默认自动查找）",
+          "required": false
+        }
+      ]
+    },
+    {
+      "name": "/parse-chapters",
+      "description": "批量处理多个章节",
+      "usage": "/parse-chapters <起始章> <结束章> <小说原文路径> [知识库路径]",
+      "example": "/parse-chapters 1 10 ./novel.txt",
+      "script": "./scripts/parse_chapters.py",
+      "parameters": [
+        {
+          "name": "start_chapter",
+          "type": "integer",
+          "description": "起始章节号",
+          "required": true
+        },
+        {
+          "name": "end_chapter",
+          "type": "integer",
+          "description": "结束章节号",
+          "required": true
+        },
+        {
+          "name": "source_path",
+          "type": "string",
+          "description": "小说原文文件或目录路径",
+          "required": true
+        },
+        {
+          "name": "kb_path",
+          "type": "string",
+          "description": "知识库路径（可选，默认自动查找）",
+          "required": false
+        }
+      ]
+    }
+  ],
+  "templates": {
+    "preprocess": "0_预处理/第{{chapter}}章预处理.md",
+    "query_report": "0_预处理/第{{chapter}}章查询报告.md",
+    "entity": "{{type}}/{{name}}.md",
+    "chapter_summary": "8_章节总结/第{{chapter}}章总结.md",
+    "change_log": "7_变化日志/{{type}}变化日志.md",
+    "timeline": "7_变化日志/总变化时间线.md",
+    "key_memory": "9_关键记忆点/{{type}}.md"
+  },
+  "workflow": {
+    "operation1": {
+      "name": "预处理（纯提取）",
+      "description": "只读本章原文，不查询知识库、不做任何判断，自动提取人物、组织、地域、事件等实体",
+      "output": "0_预处理/第{{chapter}}章预处理.md"
+    },
+    "operation2": {
+      "name": "查询知识库",
+      "description": "只查询、不修改，根据预处理内容查询相关实体的当前状态和历史记录",
+      "output": "0_预处理/第{{chapter}}章查询报告.md"
+    },
+    "operation3": {
+      "name": "更新知识库",
+      "description": "一次性写完所有更新（实体文件 + 变化日志 + 章节总结 + 关键记忆点）",
+      "outputs": [
+        "实体文件（3_人物体系/、2_世界观与环境/地域库/、2_世界观与环境/组织库/等）",
+        "变化日志（7_变化日志/）",
+        "章节总结（8_章节总结/）",
+        "关键记忆点（9_关键记忆点/）"
+      ]
+    }
+  },
+  "knowledge_base_structure": {
+    "0_预处理": "章节预处理和查询报告文件",
+    "1_写作手法": "写作手法分析，包括单章分析和全书汇总",
+    "2_世界观与环境": {
+      "地域库": "地理、场所、地点等实体文件",
+      "组织库": "门派、势力、公司、机构等组织实体文件",
+      "世界观总览.md": "全局世界观设定总览文档"
+    },
+    "3_人物体系": "人物实体文件，每人一个独立文档",
+    "4_剧情与事件": "剧情事件记录，包括主线、支线、关键事件等",
+    "5_关系网络": "人物、组织之间的关系图谱和变更记录",
+    "6_动态演变与主题": "主题分析、剧情走向、核心思想等深度分析",
+    "7_变化日志": {
+      "人物变化日志.md": "人物状态变化记录",
+      "组织变化日志.md": "组织状态变化记录",
+      "地域变化日志.md": "地域状态变化记录",
+      "剧情与子剧情变化.md": "剧情进展变化记录",
+      "关系变化日志.md": "关系变更记录",
+      "总变化时间线.md": "全局时间线总览"
+    },
+    "8_章节总结": "单章总结文件，每章一个独立文档",
+    "9_关键记忆点": {
+      "高能语录记录.md": "经典台词、金句、名场面对话记录",
+      "关键内心和思想变化记录.md": "人物认知、信念、目标、价值判断的明显变化记录",
+      "剧情转折记录.md": "改变局势、目标、阵营、危机等级或读者预期的转折记录"
+    }
+  }
+}
