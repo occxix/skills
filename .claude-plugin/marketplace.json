@@ -33,6 +33,108 @@
       "source": "./plugins/auto-fixer",
       "description": "自动检测并修复插件项目结构问题，确保符合 Claude Code 插件规范",
       "version": "1.0.0"
+    },
+    {
+      "name": "agent-rules",
+      "source": "./plugins/agent-rules",
+      "description": "Agent 规则与最佳实践，包含各语言、平台、领域的开发规范",
+      "version": "1.0.0"
+    },
+    {
+      "name": "knowledge",
+      "source": "./plugins/knowledge",
+      "description": "通用记忆库管理 — 结构性知识、任务计划、项目文档、问题解决方案",
+      "version": "1.0.0"
+    },
+    {
+      "name": "llm-wiki",
+      "source": "./plugins/llm-wiki",
+      "description": "LLM Wiki 知识库管理",
+      "version": "1.0.0"
+    },
+    {
+      "name": "mmx-coding-search",
+      "source": "./plugins/mmx-coding-search",
+      "description": "MiniMax 代码搜索技能",
+      "version": "1.0.0"
+    },
+    {
+      "name": "mmx-coding-vlm",
+      "source": "./plugins/mmx-coding-vlm",
+      "description": "MiniMax 代码 VLM 视觉分析",
+      "version": "1.0.0"
+    },
+    {
+      "name": "mmx-image-wizard",
+      "source": "./plugins/mmx-image-wizard",
+      "description": "MiniMax 图片向导技能",
+      "version": "1.0.0"
+    },
+    {
+      "name": "mmx-image",
+      "source": "./plugins/mmx-image",
+      "description": "MiniMax 图片生成与识别技能",
+      "version": "1.0.0"
+    },
+    {
+      "name": "mmx-lyrics-gen",
+      "source": "./plugins/mmx-lyrics-gen",
+      "description": "MiniMax 歌词生成技能",
+      "version": "1.0.0"
+    },
+    {
+      "name": "mmx-lyrics",
+      "source": "./plugins/mmx-lyrics",
+      "description": "MiniMax 歌词分析技能",
+      "version": "1.0.0"
+    },
+    {
+      "name": "mmx-music-preprocess",
+      "source": "./plugins/mmx-music-preprocess",
+      "description": "MiniMax 音乐预处理技能",
+      "version": "1.0.0"
+    },
+    {
+      "name": "mmx-music",
+      "source": "./plugins/mmx-music",
+      "description": "MiniMax 音乐生成技能",
+      "version": "1.0.0"
+    },
+    {
+      "name": "mmx-search",
+      "source": "./plugins/mmx-search",
+      "description": "MiniMax 搜索技能",
+      "version": "1.0.0"
+    },
+    {
+      "name": "mmx-speech",
+      "source": "./plugins/mmx-speech",
+      "description": "MiniMax 语音合成技能",
+      "version": "1.0.0"
+    },
+    {
+      "name": "mmx-video",
+      "source": "./plugins/mmx-video",
+      "description": "MiniMax 视频生成技能",
+      "version": "1.0.0"
+    },
+    {
+      "name": "skill-creator",
+      "source": "./plugins/skill-creator",
+      "description": "Skill 创建与评估工具",
+      "version": "1.0.0"
+    },
+    {
+      "name": "skills-agentsSync",
+      "source": "./plugins/skills-agentsSync",
+      "description": "Skill 与 Agent 同步工具",
+      "version": "1.0.0"
+    },
+    {
+      "name": "skills-link",
+      "source": "./plugins/skills-link",
+      "description": "Skill 链接管理工具",
+      "version": "1.0.0"
     }
   ]
 }

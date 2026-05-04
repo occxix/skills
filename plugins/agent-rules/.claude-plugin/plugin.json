@@ -1,0 +1,1 @@
+{"name": "agent-rules", "version": "1.0.0", "description": "Use when creating, updating, merging, or replacing project-level AI instruction files (CLAUDE.md / AGENTS.md / Agents.md) for Claude Code, OpenCode, Copilot CLI, Hermes Agent, or Gemini CLI.", "skills": "./skills/"}

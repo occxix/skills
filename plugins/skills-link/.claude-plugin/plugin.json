@@ -1,0 +1,1 @@
+{"name": "skills-link", "version": "1.0.0", "description": ""自动发现并整理本地 skill 目录为符号链接。先预览计划，用户确认后再执行。"", "skills": "./skills/"}

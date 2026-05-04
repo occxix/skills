@@ -1,0 +1,1 @@
+{"name": "mmx-lyrics-gen", "version": "1.0.0", "description": "使用 MiniMax lyrics_generation API 直接生成歌词。当用户需要快速生成完整歌词、已有歌词需要修改润色时使用。触发词："生成歌词"、"写歌词"、"lyrics generation"、"歌词润色"、"修改歌词"。适合快速歌词生成场景，比 mmx-lyrics 更轻量。", "skills": "./skills/"}
