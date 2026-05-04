@@ -1,0 +1,28 @@
+{
+  "description": "Skills 项目钩子 - 插件创建后自动验证",
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 ${CLAUDE_PROJECT_ROOT}/hooks/validate_plugin_structure.py",
+            "timeout": 5
+          }
+        ]
+      }
+    ],
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 ${CLAUDE_PROJECT_ROOT}/hooks/session_start.py",
+            "timeout": 5
+          }
+        ]
+      }
+    ]
+  }
+}
