@@ -110,6 +110,12 @@ npx skills update csvkse/skills
 /plugin list
 ```
 
+> **已添加过旧版市场的用户**：需重新添加
+> ```bash
+> /plugin marketplace remove csvkse-skills
+> /plugin marketplace add csvkse/skills
+> ```
+
 ### 方式四：手动安装
 
 ```bash
