@@ -16,7 +16,5 @@
     "api",
     "claude-code"
   ],
-  "skills": [
-    "../skills/api-call/"
-  ]
+  "skills": "./skills/"
 }

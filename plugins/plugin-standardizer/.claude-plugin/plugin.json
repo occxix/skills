@@ -16,7 +16,5 @@
     "claude-code"
   ],
   "minimum_claude_version": "1.8.0",
-  "skills": [
-    "../skills/plugin-standardizer/"
-  ]
+  "skills": "./skills/"
 }

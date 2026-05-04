@@ -17,7 +17,5 @@
     "context",
     "claude-code"
   ],
-  "skills": [
-    "../skills/context-test/"
-  ]
+  "skills": "./skills/"
 }

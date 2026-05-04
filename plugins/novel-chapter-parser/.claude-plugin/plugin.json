@@ -27,7 +27,5 @@
   "dependencies": {
     "python": ">=3.8"
   },
-  "skills": [
-    "../skills/novel-chapter-parser/"
-  ]
+  "skills": "./skills/"
 }
