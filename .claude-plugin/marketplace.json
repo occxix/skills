@@ -7,43 +7,43 @@
     {
       "name": "minimax-api",
       "source": "./plugins/minimax-api",
-      "description": "MiniMax M2.5/M2.7 API 调用指南，包含 Python 调用示例、模型选择建议与错误处理",
+      "description": "MiniMax M2.5/M2.7 API 调用指南",
       "version": "1.0.0"
     },
     {
       "name": "minimax-testing",
       "source": "./plugins/minimax-testing",
-      "description": "MiniMax M2.5/M2.7 模型上下文测试套件，支持 Recall、筛选、数学、代码、推理多维度测试",
+      "description": "MiniMax 模型上下文测试套件",
       "version": "1.0.0"
     },
     {
       "name": "novel-chapter-parser",
       "source": "./plugins/novel-chapter-parser",
-      "description": "小说章节解析器，三次操作流程构建知识库，自动提取人物、组织、剧情等实体",
+      "description": "小说章节解析器，知识库自动构建",
       "version": "2.1.0"
     },
     {
       "name": "plugin-standardizer",
       "source": "./plugins/plugin-standardizer",
-      "description": "将非标准 Claude Code 插件转换为标准格式，自动重构目录结构并注册到 marketplace",
+      "description": "插件格式标准化工具",
       "version": "1.0.0"
     },
     {
       "name": "auto-fixer",
       "source": "./plugins/auto-fixer",
-      "description": "自动检测并修复插件项目结构问题，确保符合 Claude Code 插件规范",
+      "description": "自动检测并修复插件结构问题",
       "version": "1.0.0"
     },
     {
       "name": "agent-rules",
       "source": "./plugins/agent-rules",
-      "description": "Agent 规则与最佳实践，包含各语言、平台、领域的开发规范",
+      "description": "Agent 规则与最佳实践",
       "version": "1.0.0"
     },
     {
       "name": "knowledge",
       "source": "./plugins/knowledge",
-      "description": "通用记忆库管理 — 结构性知识、任务计划、项目文档、问题解决方案",
+      "description": "通用记忆库管理",
       "version": "1.0.0"
     },
     {
@@ -53,69 +53,9 @@
       "version": "1.0.0"
     },
     {
-      "name": "mmx-coding-search",
-      "source": "./plugins/mmx-coding-search",
-      "description": "MiniMax 代码搜索技能",
-      "version": "1.0.0"
-    },
-    {
-      "name": "mmx-coding-vlm",
-      "source": "./plugins/mmx-coding-vlm",
-      "description": "MiniMax 代码 VLM 视觉分析",
-      "version": "1.0.0"
-    },
-    {
-      "name": "mmx-image-wizard",
-      "source": "./plugins/mmx-image-wizard",
-      "description": "MiniMax 图片向导技能",
-      "version": "1.0.0"
-    },
-    {
-      "name": "mmx-image",
-      "source": "./plugins/mmx-image",
-      "description": "MiniMax 图片生成与识别技能",
-      "version": "1.0.0"
-    },
-    {
-      "name": "mmx-lyrics-gen",
-      "source": "./plugins/mmx-lyrics-gen",
-      "description": "MiniMax 歌词生成技能",
-      "version": "1.0.0"
-    },
-    {
-      "name": "mmx-lyrics",
-      "source": "./plugins/mmx-lyrics",
-      "description": "MiniMax 歌词分析技能",
-      "version": "1.0.0"
-    },
-    {
-      "name": "mmx-music-preprocess",
-      "source": "./plugins/mmx-music-preprocess",
-      "description": "MiniMax 音乐预处理技能",
-      "version": "1.0.0"
-    },
-    {
-      "name": "mmx-music",
-      "source": "./plugins/mmx-music",
-      "description": "MiniMax 音乐生成技能",
-      "version": "1.0.0"
-    },
-    {
-      "name": "mmx-search",
-      "source": "./plugins/mmx-search",
-      "description": "MiniMax 搜索技能",
-      "version": "1.0.0"
-    },
-    {
-      "name": "mmx-speech",
-      "source": "./plugins/mmx-speech",
-      "description": "MiniMax 语音合成技能",
-      "version": "1.0.0"
-    },
-    {
-      "name": "mmx-video",
-      "source": "./plugins/mmx-video",
-      "description": "MiniMax 视频生成技能",
+      "name": "mmx",
+      "source": "./plugins/mmx",
+      "description": "MiniMax 全套技能包：图片、视频、音乐、语音、代码搜索等",
       "version": "1.0.0"
     },
     {

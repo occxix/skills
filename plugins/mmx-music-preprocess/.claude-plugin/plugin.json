@@ -1,1 +1,0 @@
-{"name": "mmx-music-preprocess", "version": "1.0.0", "description": "使用 MiniMax API 提取音频特征和歌词预处理。当用户想要分析音频文件、提取歌曲特征、预处理翻唱素材，或提到"音频预处理"、"提取特征"、"music_cover_preprocess"、"音频分析"时使用。", "skills": "./skills/"}

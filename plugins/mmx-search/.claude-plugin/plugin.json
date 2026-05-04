@@ -1,1 +1,0 @@
-{"name": "mmx-search", "version": "1.0.0", "description": "Use mmx to search the web via MiniMax search API. Use when the user wants to search the web, look up current information, find recent news, research a topic online, or verify facts. Triggers on "搜索", "查一下", "搜一搜", "最新消息", "查询", "网络搜索", "search", "look up", "find information about".", "skills": "./skills/"}

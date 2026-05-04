@@ -1,0 +1,22 @@
+{
+  "name": "mmx",
+  "version": "1.0.0",
+  "description": "MiniMax 全套技能包：图片生成、图像识别、视频生成、语音合成、音乐生成、歌词分析、代码搜索等",
+  "author": {
+    "name": "csvkse",
+    "url": "https://github.com/csvkse"
+  },
+  "homepage": "https://github.com/csvkse/skills/tree/main/plugins/mmx",
+  "repository": "https://github.com/csvkse/skills",
+  "license": "MIT",
+  "keywords": [
+    "minimax",
+    "mmx",
+    "image",
+    "video",
+    "music",
+    "speech",
+    "claude-code"
+  ],
+  "skills": "./skills/"
+}

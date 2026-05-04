@@ -1,1 +1,0 @@
-{"name": "mmx-speech", "version": "1.0.0", "description": "Use mmx to synthesize speech via MiniMax TTS (speech-2.8-hd). Use when the user wants text-to-speech, voice narration, audiobook, podcast scripts, subtitle generation, or high-quality audio from text. Triggers on "TTS", "语音合成", "朗读", "配音", "旁白", "生成音频", "文字转语音".", "skills": "./skills/"}

@@ -1,1 +1,0 @@
-{"name": "mmx-video", "version": "1.0.0", "description": "Use mmx to generate videos via MiniMax Hailuo models. Use when the user wants to generate video clips, text-to-video, image-to-video, subject reference video, or start-end frame interpolation. Triggers on "生成视频", "文生视频", "图生视频", "Hailuo", "视频片段", "T2V", "I2V", "video generate".", "skills": "./skills/"}
