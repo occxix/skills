@@ -16,6 +16,7 @@
 | [minimax-testing](./plugins/minimax-testing) | 1.0.0 | 上下文测试套件，多维度测试 |
 | [novel-chapter-parser](./plugins/novel-chapter-parser) | 2.1.0 | 小说章节解析器，知识库自动构建 |
 | [plugin-standardizer](./plugins/plugin-standardizer) | 1.0.0 | 插件格式标准化工具 |
+| [auto-fixer](./plugins/auto-fixer) | 1.0.0 | 自动检测并修复插件结构问题 |
 
 ---
 
@@ -62,6 +63,9 @@ npx skills add csvkse/skills
 
 # 安装特定插件
 npx skills add csvkse/skills/plugins/novel-chapter-parser
+
+# 更新插件
+npx skills update csvkse/skills
 ```
 
 ### 方式二：通过 Claude Code 插件市场
@@ -73,6 +77,20 @@ npx skills add csvkse/skills/plugins/novel-chapter-parser
 # 安装插件
 /plugin install novel-chapter-parser@csvkse
 /plugin install plugin-standardizer@csvkse
+/plugin install auto-fixer@csvkse
+
+# 更新插件
+/plugin update novel-chapter-parser@csvkse
+
+# 更新所有插件
+/plugin update --all
+
+# 启用/禁用插件
+/plugin enable novel-chapter-parser@csvkse
+/plugin disable novel-chapter-parser@csvkse
+
+# 查看已安装插件
+/plugin list
 ```
 
 ### 方式三：手动安装
@@ -80,6 +98,9 @@ npx skills add csvkse/skills/plugins/novel-chapter-parser
 ```bash
 git clone https://github.com/csvkse/skills.git
 cp -r skills/plugins/* ~/.claude/plugins/
+
+# 更新
+cd skills && git pull
 ```
 
 ---
@@ -126,6 +147,23 @@ MiniMax M2.5/M2.7 API 调用指南。
 - 检测并移动 SKILL.md、scripts 到正确位置
 - 转换 skill.json 为 plugin.json
 - 自动注册到 marketplace.json
+
+### auto-fixer
+
+自动检测并修复插件项目结构问题。
+
+**功能**：
+- 检测 Skills、Agents、Commands、Hooks 等结构问题
+- 自动修复 frontmatter 缺失、格式错误
+- 修复编码问题、路径错误
+- 补充 plugin.json、marketplace.json 缺失字段
+
+**命令**：
+```bash
+/auto-fixer scan              # 扫描问题
+/auto-fixer fix               # 自动修复
+/auto-fixer fix --type skills # 修复特定类型
+```
 
 ---
 
