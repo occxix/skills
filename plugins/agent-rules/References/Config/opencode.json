@@ -1,0 +1,20 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "instructions": [
+    "AGENTS.md",
+    ".claude/CLAUDE.md"
+  ],
+  "permission": {
+    "edit": "allow",
+    "bash": {
+      "*": "ask",           // 默认询问
+      "git *": "allow",     // git 操作自动
+      "npm *": "allow",     // npm 操作自动
+      "pnpm *": "allow",
+      "yarn *": "allow",
+      "rm -rf *": "deny",   // 危险删除禁止
+      "sudo *": "deny"      // sudo 禁止
+    },
+    "webfetch": "ask"
+  }
+}

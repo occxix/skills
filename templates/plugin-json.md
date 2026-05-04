@@ -21,7 +21,5 @@ usage: 复制并修改字段值
     "{{关键词2}}"
   ],
   "minimum_claude_version": "1.8.0",
-  "skills": [
-    "../skills/{{skill-name}}/"
-  ]
+  "skills": "./skills/"
 }

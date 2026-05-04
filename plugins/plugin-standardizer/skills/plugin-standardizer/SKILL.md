@@ -92,9 +92,7 @@ plugins/<plugin-name>/
   "license": "MIT",
   "keywords": ["<关键词>"],
   "minimum_claude_version": "1.8.0",
-  "skills": [
-    "../skills/<skill-name>/"
-  ]
+  "skills": "./skills/"
 }
 ```
 

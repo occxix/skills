@@ -87,7 +87,7 @@ description: Automatically detect and fix plugin project structure issues. Valid
 | 问题 | 检测方法 | 修复动作 |
 |------|----------|----------|
 | 缺少必需字段 | 检查 name, version, description, skills | 补充缺失字段 |
-| skills 路径格式错误 | 检查路径格式 | 修正为 `../skills/<name>/` |
+| skills 路径格式错误 | 检查路径格式 | 修正为 `./skills/` |
 | version 格式错误 | 检查 semver 格式 | 修正为标准格式 |
 
 ### 9. marketplace.json 结构
@@ -215,7 +215,7 @@ tools: Read, Write, Edit, Bash, Glob, Grep
   "name": "{{plugin-name}}",
   "version": "1.0.0",
   "description": "{{从 README 或 SKILL.md 提取}}",
-  "skills": ["../skills/{{skill-name}}/"]
+  "skills": "./skills/"
 }
 ```
 

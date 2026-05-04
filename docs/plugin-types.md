@@ -153,7 +153,7 @@ csvkse-skills/                  # marketplace 根
   "repository": "https://github.com/author/repo",
   "license": "MIT",
   "keywords": ["claude-code", "skill"],
-  "skills": ["../skills/skill-name/"]
+  "skills": "./skills/"
 }
 ```
 

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Agent Rules"
+  short_description: "Manage project AI instruction files"
+  default_prompt: "Use $agent-rules to create or update project-level AI instruction files for this repository."

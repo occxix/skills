@@ -1,7 +1,8 @@
 {
   "permissions": {
     "allow": [
-      "Skill(gsd-help)"
+      "Skill(gsd-help)",
+      "Skill(gsd-explore)"
     ]
   }
 }
